@@ -13,12 +13,12 @@ function App() {
       <Router>
         <Routes>
           {/* root → login */}
-          <Route path="/" element={<Navigate to="/login" replace />} />
+          <Route path="/" element={<Navigate to="Integpit/login" replace />} />
 
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="Integpit/login" element={<Login />} />
+          <Route path="Integpit//register" element={<Register />} />
 
-          <Route path="/dashboard" element={  <PrivateRoute>
+          <Route path="Integpit//dashboard" element={  <PrivateRoute>
               <Dashboard />
             </PrivateRoute>} />
 

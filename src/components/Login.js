@@ -19,7 +19,7 @@ function Login() {
       );
       const token = response.data.auth_token;
       localStorage.setItem('token', token);
-      navigate('/dashboard');
+      navigate('Integpit/dashboard');
     } catch (err) {
       setError('Invalid username or password');
     }
@@ -56,7 +56,7 @@ function Login() {
 
         <p className="redirect-text">
           Don’t have an account?{' '}
-          <button className="link" onClick={() => navigate('/register')}>
+          <button className="link" onClick={() => navigate('Integpit/register')}>
             Register
           </button>
         </p>
