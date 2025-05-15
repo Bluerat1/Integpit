@@ -63,7 +63,7 @@ const Dashboard = () => {
     } finally {
       localStorage.removeItem('token');
       localStorage.removeItem('refreshToken');
-      navigate('/Integpit/login', { replace: true });
+      navigate('/login', { replace: true });
     }
   };
 
@@ -90,7 +90,11 @@ const Dashboard = () => {
                 {typeof r.current === 'number' ? r.current.toFixed(4) : '0.0000'} A,{' '}
                 {typeof r.energy === 'number' ? r.energy.toFixed(4) : '0.0000'} kWh
               </span>
- 
+              <span className="reading-time">
+                {r.timestamp && !isNaN(new Date(r.timestamp))
+                  ? new Date(r.timestamp).toLocaleTimeString()
+                  : 'Timestamp missing'}
+              </span>
             </li>
           ))
         )}
