@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           {/* root → login */}
-          <Route path="/Integpit/" element={<Navigate to="/Integpit/login" replace />} />
+          <Route path="/" element={<Navigate to="/Integpit/login" replace />} />
 
           <Route path="/Integpit/login" element={<Login />} />
           <Route path="/Integpit/register" element={<Register />} />
@@ -24,7 +24,7 @@ function App() {
 
 
           {/* any unknown URL → root */}
-          <Route path="*" element={<Navigate to="/Integpit/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
     </AuthProvider>
