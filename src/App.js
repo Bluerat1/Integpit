@@ -13,18 +13,18 @@ function App() {
       <Router>
         <Routes>
           {/* root → login */}
-          <Route path="/" element={<Navigate to="Integpit/login" replace />} />
+          <Route path="Integpit/" element={<Navigate to="Integpit/login" replace />} />
 
           <Route path="Integpit/login" element={<Login />} />
-          <Route path="Integpit//register" element={<Register />} />
+          <Route path="Integpit/register" element={<Register />} />
 
-          <Route path="Integpit//dashboard" element={  <PrivateRoute>
+          <Route path="Integpit/dashboard" element={  <PrivateRoute>
               <Dashboard />
             </PrivateRoute>} />
 
 
           {/* any unknown URL → root */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="Integpit/" replace />} />
         </Routes>
       </Router>
     </AuthProvider>
