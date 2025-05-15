@@ -19,7 +19,7 @@ function Login() {
       );
       const token = response.data.auth_token;
       localStorage.setItem('token', token);
-      navigate('Integpit/dashboard');
+      navigate('/Integpit/dashboard');
     } catch (err) {
       setError('Invalid username or password');
     }
