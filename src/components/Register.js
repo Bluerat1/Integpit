@@ -13,7 +13,7 @@ const [form, setForm] = useState({ username: '', email: '', password: '' });
   const handleSubmit = async (e) => {
     e.preventDefault();
     await register(form);
-    history.push('Integpit/login');
+    history.push('/Integpit/login');
   };
 
 return (

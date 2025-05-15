@@ -56,7 +56,7 @@ function Login() {
 
         <p className="redirect-text">
           Don’t have an account?{' '}
-          <button className="link" onClick={() => navigate('Integpit/register')}>
+          <button className="link" onClick={() => navigate('/Integpit/register')}>
             Register
           </button>
         </p>
